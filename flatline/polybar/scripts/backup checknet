@@ -1,0 +1,115 @@
+#!/usr/bin/env bash
+
+# Copyright (C) 2025 KA-AN <andryajpeni@gmail.com>
+ 
+count=0
+connected="CONNECTION"
+disconnected="CONNECTION"
+frames=('⠓ ' '⠋ ' '⠙ ' '⠚ ')
+frame=('⠁ ' '⠉ ')
+colors=("#9dcc1d" "#862f2e")
+
+
+ID="$(ip link | awk '/state UP/ {print $2}')"
+
+while true; do
+ for framec in "${frames[@]}"; do
+ for color in "${colors[@]}"; do
+   for framed in "${frame[@]}"; do
+    if (ping -c 1 archlinux.org || ping -c 1 google.com || ping -c 1 bitbucket.org || ping -c 1 github.com || ping -c 1 sourceforge.net) &>/dev/null; then
+        if [[ $ID == e* ]]; then
+            echo "%{F$color}$framec%{F-}$connected GET" ; 
+            sleep 0.04
+        else
+            echo "%{F$color}$framec%{F-}$connected BRIDGE" ; 
+            sleep 0.04
+        fi
+    else
+        echo "$framed$disconnected LOST" ; 
+        sleep 1
+    fi
+   done
+ done
+ done
+done
+
+#!/usr/bin/env bash
+
+# Copyright (C) 2025 KA-AN <andryajpeni@gmail.com>
+
+connected="CONNECTION ESTABLISHED"
+disconnected="CONNECTION LOST"
+
+frames=(' ▚' ' ▞' ' ▛' ' ▜' ' ▟' ' ▙')
+altframes=(' ⌁' ' ⌇')
+frames=(
+'⠁ ' 
+'⠃ ' 
+'⠓ ' 
+'⠗ ' 
+'⠷ ' 
+'⠷⠄'
+
+' ⠁'
+' ⠃'
+'⠐⠃'
+'⠐⠇' 
+'⠰⠇'
+'⠴⠇'
+
+' ⠁'
+'⠐⠃'
+'⠐⠇'
+' ⠇' 
+'⠘⠇'
+'⠙⠇'
+
+'⠁ '
+'⠓ '
+'⠗ ' 
+'⠟ '
+'⠟⠁'
+
+)
+
+# frames=('⠓' '⠋' '⠙' '⠚')
+# frames=('⠁ ' '⠉ ' '⠉⠉' '⠉⠙' ' ⠙' ' ⠹' ' ⠸' ' ⣸' '⣀⣸' '⣀ ' '⣇ ')
+# frames=('⠁ ' '⠉ ' '⠉⠉' '⠉⠙' ' ⠙' ' ⠹' ' ⠸' ' ⣸' '⣀⣸' '⣀ ' '⣇ ' '⣧ ' '⣷ ' '⣿ ' '⡿ ' '⠿ ' '⠻ ' '⠟ ' '⠯ ' '⠷ ' '⠾ ' '⠽ ' '⠻ ' '⠛ ' '⠋ ' '⠓ ')
+frames=(' ⣧' ' ⣷' ' ⣿' ' ⡿' ' ⠿' ' ⠻' ' ⠟' ' ⠯' ' ⠷' ' ⠾' ' ⠽' ' ⠻' ' ⠛' ' ⠋' ' ⠓')
+# frames=(' ⠿' ' ⠻' ' ⠟' ' ⠯' ' ⠷' ' ⠾' ' ⠽' ' ⠻' ' ⠛' ' ⠋' ' ⠓')
+altframes=(' ⠛' ' ⠋')
+colors=("#9dcc1d" "#862f2e")
+
+while true; do
+    # Update active network interface
+    iface=$(ip link | awk '/state UP/ {print $2}' | sed 's/://')
+
+    # Check connection once per loop
+    if ping -c 1 -W 1 archlinux.org &>/dev/null ||
+       ping -c 1 -W 1 google.com &>/dev/null; then
+        status="$connected"
+        is_connected=true
+    else
+        status="$disconnected"
+        is_connected=false
+    fi
+
+    # Animate frames
+    for framec in "${frames[@]}"; do
+        for color in "${colors[@]}"; do
+            for alt in "${altframes[@]}"; do
+                if $is_connected; then
+                    if [[ $iface == e* ]]; then
+                        echo "%{F$color}$framec%{F-} $status"
+                    else
+                        echo "%{F$color}$framec%{F-} $status"
+                    fi
+                    sleep 0.1
+                else
+                    echo "$alt $status"
+                    sleep 1
+                fi
+            done
+        done
+    done
+done
