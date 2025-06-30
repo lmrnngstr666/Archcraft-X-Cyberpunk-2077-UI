@@ -1,6 +1,13 @@
 # Archcraft-X-Cyberpunk-2077-UI
-I Using Archcraft LInux BSPWM WM
+I Using Archcraft Linux BSPWM WM
 
-Copy "flatline" folder to ~/.config/bspwm/themes/
-Super + T and Select flatline themes.
+$THEMES:
+1. flatline
+2. cyberdeck
+3. cyberblack
+4. cyberwhite
 
+Copy "$THEMES" folder to ~/.config/bspwm/themes/
+Press Super + T and Select flatline themes. 
+
+I still work on other Themes, Keep Chech my Youtube Chanel or My TikTok for more Update ;)
