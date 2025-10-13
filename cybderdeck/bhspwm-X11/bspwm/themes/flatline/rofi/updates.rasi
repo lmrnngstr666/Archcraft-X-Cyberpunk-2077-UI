@@ -1,0 +1,246 @@
+/*****----- Configuration -----*****/
+configuration {
+	modi:                       "drun";
+    show-icons:                 false;
+    display-drun:               " Apps";
+    display-run:                " Run";
+    display-filebrowser:        " Files";
+    display-window:             " Windows";
+	drun-display-format:        "{name}";
+	window-format:              "{c} · {t}";
+}
+
+/*
+USE_ICON=NO
+*/
+
+/*****----- Global Properties -----*****/
+@import                          "shared/colors.rasi"
+@import                          "shared/fonts.rasi"
+/*****-----
+* {
+    selected:               var(selected);
+    handle-colour:               var(selected);
+    background-colour:           var(background);
+    foreground-colour:           var(foreground);
+    background-alt:        var(background-alt);
+    normal-background:           var(background);
+    normal-foreground:           var(foreground);
+    urgent-background:           var(urgent);
+    urgent-foreground:           var(background);
+    active-background:           var(active);
+    active-foreground:           var(background);
+    selected-normal-background:  var(foreground);
+    selected-normal-foreground:  var(background);
+    selected-urgent-background:  var(active);
+    selected-urgent-foreground:  var(background);
+    selected-active-background:  var(urgent);
+    selected-active-foreground:  var(background);
+    alternate-normal-background: var(background);
+    alternate-normal-foreground: var(foreground);
+    alternate-urgent-background: var(urgent);
+    alternate-urgent-foreground: var(background);
+    alternate-active-background: var(active);
+    alternate-active-foreground: var(background);
+}
+-----*****/
+
+/*****----- Main Window -----*****/
+window {
+    /* properties for window widget */
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  true;
+    width:                       300px;
+    x-offset:                    0px;
+    y-offset:                    0px;
+    /* properties for all widgets */
+    enabled:                     true;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      0px solid;
+    border-radius:               0px;
+    border-color:                @selected;
+    background-image:            url("/home/mrnngstr666/.config/rofi/user-interfces/cyberpunk/update/update-bg.png", width);
+
+    cursor:                      "default";
+    background-color:              #160101ea;
+  
+}
+
+/*****----- Main Box -----*****/
+mainbox {
+    enabled:                     true;
+    spacing:                     20px;
+    margin:                      250px 500px 240px 130px;
+    padding:                     0px;
+    border:                      0px solid;
+    border-radius:               0px;
+    border-color:                @selected;
+    background-color:        transparent;
+    children:                    ["listview","inputbar"];
+}
+
+/*****----- Inputbar -----*****/
+inputbar {
+    enabled:                     true;
+    spacing:                     0px;
+    margin:                      0px 0px 0px 0px;
+    padding:                     0px;
+    border:                      0px 0px 0px 0px solid;
+    border-radius:               0px;
+    border-color:                #fe6760;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    children: ["textbox-prompt-colon", "prompt" ];
+}
+
+prompt {
+    enabled:                     true;
+    background-color:            inherit;
+    margin:                      30px 0px 0px -610px;
+    padding:                      0px;
+    font: "Rajdhani Semibold 14";
+    text-color:                  #15251b;
+}
+textbox-prompt-colon {
+    enabled:                     true;
+    font: "Rajdhani 14";
+    expand:                      true;
+    margin:                      0px;
+    padding:                    15px 0px 9px 8px;
+    background-color:              transparent;
+    text-color: #76f8ff;
+    border:                      0px 0px 0px 0px solid;
+    border-radius:               0px;
+    border-color:                #f95452;
+}
+entry {
+    enabled:                     true;
+    padding:                     0px 8px;
+    background-color:              #fe6760;
+    text-color:                  inherit;
+    cursor:                      text;
+    vertical-align: 0.5;
+    font: "Orpheis 20";
+    placeholder:                 "TYPE HERE";
+    placeholder-color:           #222222;
+}
+num-filtered-rows {
+    enabled:                     true;
+    expand:                      false;
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+textbox-num-sep {
+    enabled:                     true;
+    expand:                      false;
+    str:                         "/";
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+num-rows {
+    enabled:                     true;
+    expand:                      false;
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+message {
+    border-color:                #f95452;
+    background-color:           transparent;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+    font:                        "Rajdhani 15"; 
+}
+
+/*****----- Listview -----*****/
+listview {
+    enabled:                     true;
+    columns:                     1;
+    lines:                       6;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true; 
+    spacing:                     5px;
+    margin:                      0px 300px 0px 0px;
+    padding:                     0px 0px 0px 0px;
+    border:                      0px solid;
+    border-radius:               0px;
+    border-color:                #f95452;
+    background-color:           transparent;
+    cursor:                      "default";
+}
+
+scrollbar {
+    handle-width:                4px ;
+    handle-color:                #e7655f;
+    border-radius:               100px;
+    background-color:            #000000;
+}
+/*****----- Elements -----*****/
+element {
+    enabled:                     true;
+    spacing:                     10px;
+    margin:                      0px;
+    padding:                    0px 0px 0px 5px;
+    border:                      0px solid; 
+    border-radius:               0px;
+    border-color:                @selected;
+    background-color:            transparent;
+    text-color:                 #1dd677;
+    cursor:                      pointer;
+}
+ 
+element-text {
+    background-color:            transparent;
+    text-color:                  inherit;
+    highlight:                   inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+    font:                        "Orpheis 9"; 
+} 
+ 
+element normal.normal {
+       background-color:            transparent;
+    text-color:                  #1dd677;
+
+}
+element normal.urgent {
+    background-color:            transparent;
+    text-color:                  #1dd677;
+}
+element normal.active {
+       background-color:            transparent;
+    text-color:                  #1dd677;
+}
+element selected.normal {
+     background-color:            transparent;
+    text-color: #0ea356;
+
+}
+element selected.urgent {
+      background-color:            transparent;
+    text-color:                  #1dd677;
+}
+element selected.active {
+       background-color:            transparent;
+    text-color:                  #1dd677;
+}
+element alternate.normal {
+        background-color:            transparent;
+    text-color:                  #1dd677;
+}
+element alternate.urgent {
+        background-color:            transparent;
+    text-color:                  #1dd677;
+}
+element alternate.active {
+       background-color:            transparent;
+    text-color:                  #1dd677;
+}

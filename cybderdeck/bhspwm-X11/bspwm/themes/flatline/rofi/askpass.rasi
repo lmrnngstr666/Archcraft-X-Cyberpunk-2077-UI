@@ -1,0 +1,77 @@
+/**
+ * Copyright (C) 2020-2024 Aditya Shakya <adi1090x@gmail.com>
+ **/
+
+/*****----- Global Properties -----*****/
+@import                          "shared/colors.rasi"
+@import                          "shared/fonts.rasi"
+
+/*****----- Main Window -----*****/
+window {
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  true;
+    width:                       350px;
+    x-offset:                    0px;
+    y-offset:                    0px;
+    padding:                     15px;
+    border:                      0px solid;
+    border-radius:               0px;
+    border-color:                @selected;
+    background-color:            #862f2e34;
+    cursor:                      "default";
+    children:                    [ "inputbar", "listview" ];
+}
+
+/*****----- Inputbar -----*****/
+inputbar {
+    enabled:                     true;
+    spacing:                     10px;
+    margin:                      400px 500px;
+    padding:                     5px;
+    border:                      1px solid;
+    border-radius:               0px;
+    border-color:                @selected;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    children:                    [  "entry" ];
+}
+
+dummy {
+    expand:                      false;
+    width:                       10px;
+    background-color:            transparent;
+}
+
+prompt {
+    enabled:                     true;
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+textbox-prompt-colon {
+    enabled:                     true;
+    padding:                     5px 0px;
+    font: "jetBrainsMono Nerd Font 20";
+    expand:                      false;
+    str:                         "";
+    padding:0px 20px 0px 0px;
+    background-color:            inherit;
+    text-color:                  @urgent;
+}
+entry {
+    enabled:                     true;
+    padding:                     0px 0px;
+    background-color:            inherit;
+    text-color:                  inherit;
+    cursor:                      text;
+   horizontal-align: 0.5;
+    vertical-align: 0.5;
+    font: "jetBrainsMono Nerd Font 20";
+    placeholder:                 "";
+    placeholder-color:           #222222;
+}
+
+/*****----- Listview -----*****/
+listview {
+    enabled:                     false;
+}

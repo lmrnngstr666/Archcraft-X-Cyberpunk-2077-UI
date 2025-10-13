@@ -1,0 +1,3 @@
+for monitor in `xrandr -q | grep -w 'connected' | cut -d' ' -f1`; do
+		bspc monitor "$monitor" -d '' '󰖟' '' '󰨞' '' '' '' '󱌣'
+	done

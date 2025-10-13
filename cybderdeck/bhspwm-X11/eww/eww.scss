@@ -1,0 +1,103 @@
+* {
+    all: unset; 
+} 
+ 
+.out-left-text {
+  font-size:8px;
+  background: none; 
+  color: #752b2a;
+  font-family: monospace;
+}
+.out-left-text-center {
+  font-size:7px;
+  background: none; 
+  color:#48201f;
+  font-family: rajdhani;
+  font-weight: bold;
+}
+.out-frame {
+  font-size:10px;
+  background: none; 
+  color:#452d37;
+  font-family: monospace;
+}
+.out-frame-bin {
+  font-size:8px;
+  background: none; 
+  color:#752b2a;
+  font-family: rajdhani;
+}
+.out-frame-dot {
+  font-size: 22px;
+  letter-spacing: -4px;
+  padding-left: 7px;
+  background: none; 
+  color:#69302d;
+  font-family: monospace;
+}
+ .line-frame-bin {
+  font-size: 4px;    
+  background: none; 
+  color:#3e592f;
+  font-family: monospace;
+}
+ 
+.code-anim-bottom {
+  font-size: 3px;
+  background: none; 
+  color:#fe6760;
+  font-family: rajdhani;
+}
+.code-bin-bottom  {
+  font-size: 4px;
+  background: none; 
+  color:#fe6760;
+  font-family: rajdhani;
+}
+ 
+// update
+.bg-window {
+  background-image: url("/home/mrnngstr666/.config/eww/images/update-bg1.png");
+  background-size: cover;
+  background-position: center;
+  min-width: 1366px; 
+  min-height: 768px;
+}
+ 
+.side-widget-left {  
+ background-color: rgba(255, 0, 0, 0.549);
+}
+
+.center-space {
+  background-color:rgba(0, 0, 255, 0.474);
+}
+.side-widget-right {  
+    background-color: rgba(255, 255, 0, 0.422);
+}
+
+.update-list-left { 
+    background: none; 
+    padding: 0px 10px;
+}
+
+.update-list-right {
+    background: none; 
+    padding: 0px 10px;
+}
+
+.update-list-top-left {
+    background-color: rgba(59, 59, 43, 0.422);
+}
+
+.update-list-bottom-left {
+    background-color: rgba(40, 40, 3, 0.422);
+}
+
+.update-list-top-right {
+    background-color: rgba(59, 59, 43, 0.422);
+}
+
+.update-list-bottom-right {
+    background-color: rgba(40, 40, 3, 0.422);
+}
+ 

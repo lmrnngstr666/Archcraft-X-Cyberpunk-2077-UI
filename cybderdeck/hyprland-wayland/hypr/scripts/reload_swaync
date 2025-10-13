@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+
+CONFIG="$HOME/.config/swaync/config.json"
+
+# Cek apakah mako sedang berjalan
+if pgrep -x mako > /dev/null; then
+    echo "mako terdeteksi — akan dimatikan..."
+    killall -q mako
+    sleep 0.5
+    echo "mako terminated"
+else
+    echo "mako tidak berjalan"
+fi
+
+# Matikan swaync jika berjalan
+if pgrep -x swaync > /dev/null; then
+    echo "swaync terdeteksi — akan dimatikan..."
+    killall -q swaync
+    sleep 0.5
+    echo "swaync terminated"
+else
+    echo "swaync tidak berjalan"
+fi
+
+# Jalankan swaync jika belum berjalan
+if ! pgrep -x swaync > /dev/null; then
+    echo "Menjalankan swaync di latar belakang..."
+    GDK_BACKEND=wayland swaync --config "$CONFIG" &
+    disown
+    echo "swaync dimulai"
+    
+    # Tambahkan delay agar swaync siap di D-Bus
+    sleep 1
+fi
+
+
+# Kirim notifikasi menggunakan swaync
+notify-send -a swaync "Reload Swaync" "Konfigurasi swaync dimuat ulang"

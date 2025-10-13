@@ -1,0 +1,70 @@
+#!/usr/bin/env bash
+
+DIR="$HOME/.config/bspwm"
+STYLE="cyberpunk2077"
+RASI="$DIR/themes/$STYLE/rofi/music.rasi"
+
+mapfile -t playlist_files < <(mpc --format %file% playlist)
+mapfile -t playlist_titles < <(mpc playlist)
+
+current_song_file=$(mpc --format %file% current)
+status=$(mpc status)
+
+echo "Current song file: $current_song_file"
+echo "Playback status: $status"
+
+if [[ -z "$status" ]]; then
+    prompt='RADIOPORT'
+    mesg="RADIOPORT"
+else
+    current_title="$(mpc -f "%artist% %title%" current)"
+    prompt="$current_title"
+    mesg="RADIOPORT"
+fi
+
+# Rofi command
+rofi_cmd() {
+    rofi -dmenu \
+        -p "$prompt" \
+        -mesg "$mesg" \
+        -theme "${RASI}"
+}
+
+run_rofi() {
+    local output=()
+    for title in "${playlist_titles[@]}"; do
+        output+=("$title")  # Removed the icon prefix
+    done
+    printf '%s\n' "${output[@]}" | rofi_cmd
+}
+
+run_cmd() {
+    local selected="$1"
+
+    # Strip leading spaces.
+    selected="${selected#"${selected%%[! ]*}"}"  # Remove leading spaces
+
+    local play_index=-1
+    for i in "${!playlist_titles[@]}"; do
+        if [[ "${playlist_titles[i]}" == "$selected" ]]; then
+            play_index=$((i + 1))
+            break
+        fi
+    done
+
+    if (( play_index == -1 )); then
+        echo "Song not found: '$selected'" >&2
+        return
+    fi
+
+    if [[ "${playlist_files[play_index-1]}" == "$current_song_file" ]] && [[ "$status" == *"[playing]"* ]]; then
+        mpc pause
+    else
+        mpc play "$play_index"
+    fi
+}
+
+chosen="$(run_rofi)"
+if [[ -n "$chosen" ]]; then
+    run_cmd "$chosen"
+fi

@@ -1,0 +1,64 @@
+(defwidget home-screen-decor []
+  (box
+    :orientation "v"
+    :space-evenly "false"
+    :vexpand "false"
+    :hexpand "false"
+    :halign "center"
+    :spacing 50
+    (box
+      :orientation "h"
+      :space-evenly "true"
+      :vexpand "false"
+      :hexpand "false"
+      :spacing 5
+      :class "home-top"
+      (label :text "home decor")
+    )
+  )
+)
+
+
+(defwidget date-frame-blink []
+  (image
+    :path "./images/home/date-frame-blink.png"
+    :image-width 93
+    :image-height 55
+    :halign "start"
+    :valign "end"
+    :class "date-frame-blink"
+  )
+)
+
+(defwidget date-bg []
+  (image
+    :path "./images/home/date-bg.png"
+    :image-width 92
+    :image-height 44
+    :halign "start"
+    :valign "end"
+    :class "date-bg"
+  )
+)
+
+(defwidget date-rame-rl []
+  (image
+    :path "./images/home/date-rame-rl.png"
+    :image-width 119
+    :image-height 44
+    :halign "start"
+    :valign "end"
+    :class "date-rame-rl"
+  )
+)
+
+(defwidget uptimes []
+  (image
+    :path "./images/home/uptime.png"
+    :image-width 152
+    :image-height 43
+    :halign "start"
+    :class "uptimes"
+    :valign "end"
+  )
+)

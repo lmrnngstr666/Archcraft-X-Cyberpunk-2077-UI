@@ -1,0 +1,36 @@
+{
+  "include": "~/.config/hypr/waybar/modules",
+  "name": "main-bar",
+  "reload_style_on_change": true,
+  "id": "main-bar",
+  "layer": "top",
+  "exclusive": true,
+  "passthrough": false,
+  "position": "top",
+  "height": 40,
+  "width": "",
+  "spacing": 6,
+  "margin": 0,
+  "margin-top": 5,
+  "margin-bottom": 0,
+  "margin-left": 30,
+  "margin-right": 30,
+  "fixed-center": true,
+  "ipc": true,
+  "modules-left": [
+    "pulseaudio",
+    "pulseaudio/slider",
+    "backlight",
+    "backlight/slider"
+  ],
+  "modules-center": [
+    "hyprland/workspaces"
+  ],
+  "modules-right": [
+    "custom/cpuid",
+    "cpu",
+    "memory",
+    "custom/str",
+    "disk"
+  ]
+}

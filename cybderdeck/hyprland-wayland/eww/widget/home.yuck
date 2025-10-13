@@ -1,0 +1,190 @@
+
+
+
+(defwidget home-screen-widget []
+  (box
+    :orientation "v"
+    :space-evenly "true"
+    :vexpand "false"
+    :hexpand "true"
+    :halign "center"
+    :class "home-screen"
+    :spacing 50
+    (box
+      :orientation "h"
+      :space-evenly "false"
+      :vexpand "false"
+      ; :hexpand "false"
+      :halign "center"
+      :spacing 32
+      :class "home-top"
+      (image
+        :path "./images/home/logo-wm.png" ; edit change to hyprland
+        :image-width 146
+        :image-height 202
+        :halign "center"
+        :class "logo-wm"
+        :valign "end"
+      )
+      (image
+        :path "./images/home/logo-interface.png"
+        :image-width 147
+        :image-height 202
+        :halign "center"
+        :class "logo-interface"
+        :valign "end"
+      )
+      (image
+        :path "./images/home/logo-kernel.png" ; edit change to archcraft
+        :image-width 147
+        :image-height 203
+        :halign "center"
+        :class "logo-kernel"
+        :valign "end"
+      )
+    )
+    
+    (box
+      :orientation "h"
+      :space-evenly "false"
+      :vexpand "false"
+      :hexpand "false"
+      :halign "center"
+      :spacing 16
+      :class "home-center"
+      (button
+        :text "home center"
+        :class "center-button"
+        
+        :halign "center"
+        :valign "center"
+        (label
+          :text "button1"
+        )
+      )
+      (button
+        :text "home center"
+        :class "center-button"
+        :halign "center"
+        :valign "center"
+        (label
+          :text "button2"
+        )
+      )
+      (button
+        :text "home center"
+        :class "center-button"
+        :halign "center"
+        :valign "center"
+        (label
+          :text "button3"
+        )
+      )
+      (button
+        :text "home center"
+        :class "center-button"
+        :halign "center"
+        :valign "center"
+        (label
+          :text "button4"
+        )
+      )
+      (button
+        :text "home center"
+        :class "center-button"
+        :halign "center"
+        :valign "center"
+        (label
+          :text "button5"
+        )
+      )
+    )
+    (box
+      :orientation "h"
+      :space-evenly "true"
+      :vexpand "false"
+      :hexpand "false"
+      :halign "baseline"
+      :spacing 5
+      :class "home-bottom"
+      (box
+        :orientation "v"
+        :space-evenly "false"
+        :vexpand "false"
+        :hexpand "false"
+        :spacing 20
+        (box
+          :orientation "h"
+          :space-evenly "false"
+          :vexpand "false"
+          :hexpand "false"
+          :spacing 10
+          (label
+            :text time_custom
+            :class "datex"
+            :halign "start"
+            :valign "center"
+          )
+          
+          (label
+            :text UPTIME
+            :class "uptime"
+            :halign "start"
+            :valign "center"
+          )
+          (label
+            :text UPMIN
+            :class "upmin"
+            :halign "start"
+            :valign "center"
+          )
+        )
+        (box
+          :orientation "v"
+          :space-evenly "false"
+          :vexpand "false"
+          :hexpand "false"
+          :spacing 5
+          (image
+            :path "./images/home/kernel-left-bottom.png"
+            :image-width 298
+            :image-height 30
+            :halign "start"
+            :valign "end"
+          )
+        )
+      )
+      (box
+        :orientation "v"
+        :space-evenly "false"
+        :vexpand "false"
+        :hexpand "false"
+        :spacing 22
+        (box
+          :orientation "v"
+          :space-evenly "false"
+          :vexpand "false"
+          :hexpand "false"
+          :spacing 5
+          :halign "end"
+          :class "app-button"
+          
+        )
+        (box
+          :orientation "v"
+          :space-evenly "false"
+          :vexpand "false"
+          :hexpand "false"
+          :spacing 5
+          (image
+            :path "./images/home/kernel-right-bottom.png"
+            :image-width 262
+            :image-height 20
+            :halign "end"
+            :valign "end"
+          )
+        )
+      )
+    )
+  )
+)

@@ -1,0 +1,162 @@
+(defwindow radio-station
+  :monitor 0
+  :anchor "c c"
+  :stacking "fg"
+  :geometry (geometry :x 415 :y 90
+    :width 415    :height 280
+  )
+  (radio-station-widget)
+)
+
+(defwidget radio-station-widget []
+  (box
+    :class "genwin"
+    :orientation "v"
+    :space-evenly "false"
+    :vexpand "false"
+    :hexpand "false"
+    (box
+      :class "genwin"
+      :orientation "v"
+      :space-evenly "false"
+      :vexpand "false"
+      :hexpand "false"
+      (label :text "RADIOPORT" :halign "start" :class "radio-head")
+    )
+    (label :text "NOW PLAYING" :halign "start" :class "now-playing")
+    (box
+      :class "radio-top"
+      :orientation "h"
+      :space-evenly "false"
+      :vexpand "false"
+      :hexpand "false"
+      (box
+        :class "album_art"
+        :vexpand "false"
+        :hexpand "false"
+        :style "background-image: url('${COVER}');"
+      )
+      (box :orientation "v"
+        :spacing 0
+        :class "radio-info"
+        :space-evenly "false"
+        :vexpand "false"
+        :hexpand "false"
+        :valign "start"
+        (label
+          :halign "start"
+          :valign "start"
+          :class "song"
+          :wrap "true"
+          :limit-width 20
+        :text SONG)
+        (label
+          :halign "start"
+          :valign "start"
+          :class "artist"
+          :wrap "true"
+          :limit-width 15
+          :text ARTIST
+        )
+        (box
+          :orientation "h"
+          :spacing 20
+          :halign "space-between"
+          :space-evenly "true"
+          :vexpand "false"
+          :hexpand "false"
+          :class "control-top"
+          (label
+            :text "CONTROL"
+            :halign "start"
+            :class "control-label"
+          )
+          (box
+            :orientation "h"
+            :spacing 20
+            :halign "start"
+            :space-evenly "true"
+            :vexpand "false"
+            :hexpand "false"
+            (button
+              :class "btn_prev"
+              :onclick "scripts/music_info --prev" "<"
+            )
+            (button
+              :class "btn_play"
+              :onclick "scripts/music_info --toggle" STATUS
+            )
+            (button
+              :class "btn_next"
+              :onclick "scripts/music_info --next" ">"
+            )
+          )
+        )
+        
+      )
+      
+    )
+    (box
+      :orientation "v"
+      :space-evenly "false"
+      :vexpand "false"
+      :hexpand "false"
+      :halign "start"
+      :class "radio-list"
+      (box
+        :orientation "h"
+        :space-evenly "true"
+        :vexpand "false"
+        :hexpand "space between"
+        :halign "start"
+        :valign "center"
+        :class "radio-footer"
+        (box
+          :orientation "v"
+          :space-evenly "false"
+          :vexpand "false"
+          :hexpand "false"
+          :halign "start"
+          :valign "start"
+          :class "radio-footer-label"
+          (label :text "sadasdklasjldkasjdklasjd")
+          (label :text "sadasdklasjldkasjdklasjd")
+          (label :text "sadasdklasjldkasjdkl")
+        )
+        (box
+          :orientation "h"
+          :space-evenly "false"
+          :vexpand "false"
+          :hexpand "false"
+          :halign "end"
+          :spacing 5
+          :class "radio-footer-button"
+          (label
+            :class "btn_enter"
+            :text "↵"
+            :valign "center"
+            :halign "center"
+          )
+          (label :text "SELECT")
+          (button
+            :class "btn_close"
+            :valign "center"
+            :halign "center"
+            :onclick "close widget" "ESC"
+          )
+          (label :text "CLOSE")
+        )
+      )
+    )
+  )
+)
+;; Music vars
+(defpoll SONG :interval "1s" `scripts/music_info --song`)
+(defpoll ARTIST :interval "1s" `scripts/music_info --artist`)
+(defpoll STATUS :interval "1s" `scripts/music_info --status`)
+(defpoll CURRENT :interval "1s" `scripts/music_info --time`)
+(defpoll COVER :interval "1s" `scripts/music_info --cover`)
+(defpoll CTIME :interval "1s" `scripts/music_info --ctime`)
+(defpoll TTIME :interval "1s" `scripts/music_info --ttime`)
+(defpoll LISTSONG :interval "1s" `scripts/music_info --listsong`)
+

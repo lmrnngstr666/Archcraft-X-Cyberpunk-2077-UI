@@ -1,0 +1,805 @@
+
+(defwidget main-bg []
+  (box
+    :orientation "v"
+    :space-evenly "false"
+    :vexpand "true"
+    :hexpand "true"
+    :halign "center"
+    :class "main-bg"
+  )
+)
+
+(defwidget access-manager-widget []
+  (box
+    :orientation "v"
+    :space-evenly "false"
+    :vexpand "false"
+    :hexpand "false"
+    :halign "center"
+    :spacing 50
+    
+    (box
+      :orientation "h"
+      :space-evenly "true"
+      :vexpand "false"
+      :hexpand "false"
+      :spacing 5
+      :class "header"
+      (box
+        :orientation "h"
+        :space-evenly "false"
+        :vexpand "false"
+        :hexpand "false"
+        :spacing 5
+        (image
+          :path "./images/access/decor/access-icon.png"
+          :image-width 25
+          :image-height 27
+          :halign "center"
+          :class "access-icon"
+          :valign "end"
+        )
+        (image
+          :path "./images/access/decor/cyberdeck-logo-bin.png"
+          :image-width 18
+          :image-height 28
+          :halign "center"
+          :valign "end"
+          :class "logo-bin"
+        )
+        (box
+          :orientation "v"
+          :space-evenly "false"
+          :vexpand "false"
+          :hexpand "false"
+          :halign "start"
+          :valign "end"
+          :spacing 0
+          :class "title-header"
+          (label
+            :text "CYBERDECK v.1.0.1"
+            :halign "start"
+            :valign "end"
+            :class "titletop"
+          )
+          (label
+            :text "ACCESS MANAGER"
+            :halign "start"
+            :valign "end"
+            :class "title"
+          )
+        )
+      )
+      (box
+        :orientation "h"
+        :space-evenly "false"
+        :vexpand "false"
+        :hexpand "false"
+        :halign "end"
+        :valign "end"
+        :spacing 5
+        (image
+          :path "./images/access/decor/protocol-icon.svg"
+          :image-width 97
+          :image-height 40
+          :halign "end"
+          :class "protocol-icon"
+          :valign "end"
+        )
+      )
+    )
+    
+    (box
+      :orientation "v"
+      :space-evenly "true"
+      :vexpand "false"
+      :spacing 42
+      ; :valign "space-between"
+      :hexpand "false"
+      ; row one start
+      (box
+        :orientation "h"
+        :space-evenly "false"
+        :vexpand "false"
+        :hexpand "false"
+        :halign "center"
+        :spacing 50
+        :class "row-1"
+        (box
+          :orientation "v"
+          :space-evenly "false"
+          :vexpand "false"
+          :hexpand "false"
+          :halign "start"
+          :valign "start"
+          :spacing 1
+          :class "blue-folder"
+          (label
+            :class "blue-label"
+            :halign "start"
+            :text "/cache/"
+          )
+          (button
+            :halign "center"
+            :class "cache-icon"
+            :onclick "eww close access-manager & thunar /var/cache"
+          )
+        )
+        (box
+          :orientation "v"
+          :space-evenly "false"
+          :vexpand "false"
+          :hexpand "false"
+          :halign "start"
+          :valign "start"
+          :spacing 1
+          :class "blue-min-top-20"
+          (label
+            :class "blue-label"
+            :halign "start"
+            :text "/log/"
+          )
+          (button
+            :halign "center"
+            :class "log-icon"
+            :onclick "eww close access-manager & thunar /var/log"
+          )
+        )
+        (box
+          :orientation "v"
+          :space-evenly "false"
+          :vexpand "false"
+          :hexpand "false"
+          :halign "start"
+          :valign "start"
+          :spacing 1
+          :class "yellow-folder"
+          (label
+            :class "yellow-label"
+            :halign "start"
+            :text "/spool/"
+          )
+          (button
+            :halign "center"
+            :class "spool-icon"
+            :onclick "eww close access-manager & thunar /var/spool"
+            
+          )
+        )
+        
+        (box
+          :orientation "v"
+          :space-evenly "false"
+          :vexpand "false"
+          :hexpand "false"
+          :halign "start"
+          :valign "start"
+          :spacing 1
+          :class "blue-min-top-20"
+          (label
+            :class "blue-label"
+            :halign "start"
+            :text "/temp/"
+          )
+          (button
+            :halign "center"
+            :class "temp-icon"
+            :onclick "eww close access-manager & thunar /var/temp"
+            
+          )
+        )
+        
+        (box
+          :orientation "v"
+          :space-evenly "false"
+          :vexpand "false"
+          :hexpand "false"
+          :halign "start"
+          :valign "start"
+          :spacing 1
+          :class "red-folder"
+          (label
+            :class "red-label"
+            :halign "start"
+            :text "/bin/"
+          )
+          (button
+            :buttonign "center"
+            :class "bin-icon"
+            :onclick "eww close access-manager & thunar /usr/bin"
+            
+          )
+        )
+        
+        
+        (box
+          :orientation "v"
+          :space-evenly "false"
+          :vexpand "false"
+          :hexpand "false"
+          :halign "start"
+          :valign "start"
+          :spacing 1
+          :class "blue-min-top-20"
+          (label
+            :class "blue-label"
+            :halign "start"
+            :text "/include/"
+          )
+          (button
+            :halign "center"
+            :class "include-icon"
+            :onclick "eww close access-manager & thunar /usr/include"
+            
+          )
+        )
+        
+        (box
+          :orientation "v"
+          :space-evenly "false"
+          :vexpand "false"
+          :hexpand "false"
+          :halign "start"
+          :valign "start"
+          :spacing 1
+          :class "red-folder"
+          (label
+            :class "red-label"
+            :halign "start"
+            :text "/lib/"
+          )
+          (button
+            :halign "center"
+            :class "lib-icon"
+            :onclick "eww close access-manager & thunar /usr/lib"
+            
+          )
+        )
+        (box
+          :orientation "v"
+          :space-evenly "false"
+          :vexpand "false"
+          :hexpand "false"
+          :halign "start"
+          :valign "start"
+          :spacing 1
+          :class "blue-min-top-20"
+          (label
+            :class "blue-label"
+            :halign "start"
+            :text "/sbin/"
+          )
+          (button
+            :halign "center"
+            :class "usbin-icon"
+            :onclick "eww close access-manager & thunar /usr/sbin"
+            
+          )
+        )
+      )
+      ; row one end
+      ; row two start
+      (box
+        :orientation "h"
+        :space-evenly "false"
+        :vexpand "false"
+        :hexpand "false"
+        :halign "center"
+        :spacing 67
+        :class "row-2"
+        (box
+          :orientation "v"
+          :space-evenly "false"
+          :vexpand "false"
+          :hexpand "false"
+          :halign "start"
+          :valign "start"
+          :spacing 1
+          :class "yellow-folder"
+          (label
+            :class "yellow-label"
+            :halign "start"
+            :text "/var/"
+          )
+          (button
+            :halign "center"
+            :class "var-icon"
+            :onclick "eww close access-manager & thunar /var"
+            
+          )
+        )
+        (box
+          :orientation "v"
+          :space-evenly "false"
+          :vexpand "false"
+          :hexpand "false"
+          :halign "start"
+          :valign "start"
+          :spacing 1
+          :class "red-min-top-20"
+          (label
+            :class "red-label"
+            :halign "start"
+            :text "/kitty/"
+          )
+          (button
+            :halign "center"
+            :class "kitty-icon"
+            :onclick "sh -c 'eww close access-manager; ~/.config/eww/scripts/app_launch.sh kitty'"
+          )
+        )
+        
+        (box
+          :orientation "v"
+          :space-evenly "false"
+          :vexpand "false"
+          :hexpand "false"
+          :halign "start"
+          :valign "start"
+          :spacing 1
+          :class "red-folder"
+          (label
+            :class "red-label"
+            :halign "start"
+            :text "/thunar/"
+          )
+          (button
+            :halign "center"
+            :class "thunar-icon"
+            :onclick "eww close access-manager & thunar"
+            
+          )
+        )
+        
+        (box
+          :orientation "v"
+          :space-evenly "false"
+          :vexpand "false"
+          :hexpand "false"
+          :halign "start"
+          :valign "start"
+          :spacing 1
+          :class "red-min-top-20"
+          (label
+            :class "red-label"
+            :halign "start"
+            :text "/geany/"
+          )
+          (button
+            :halign "center"
+            :class "geany-icon"
+            :onclick "sh -c 'eww close access-manager; ~/.config/eww/scripts/app_launch.sh geany'"
+          )
+        )
+        
+        (box
+          :orientation "v"
+          :space-evenly "false"
+          :vexpand "false"
+          :hexpand "false"
+          :halign "start"
+          :valign "start"
+          :spacing 1
+          :class "red-folder"
+          (label
+            :class "red-label"
+            :halign "start"
+            :text "/firefox/"
+          )
+          (button
+            :halign "center"
+            :class "firefox-icon"
+            :onclick "sh -c 'eww close access-manager; ~/.config/eww/scripts/app_launch.sh firefox'"
+          )
+        )
+        
+        
+        (box
+          :orientation "v"
+          :space-evenly "false"
+          :vexpand "false"
+          :hexpand "false"
+          :halign "start"
+          :valign "start"
+          :spacing 1
+          :class "red-min-top-20"
+          (label
+            :class "red-label"
+            :halign "start"
+            :text "/vim/"
+          )
+          (button
+            :halign "center"
+            :class "vim-icon"
+            :onclick "sh -c 'eww close access-manager; ~/.config/eww/scripts/app_launch.sh vim'"
+          )
+        )
+        
+        (box
+          :orientation "v"
+          :space-evenly "false"
+          :vexpand "false"
+          :hexpand "false"
+          :halign "start"
+          :valign "start"
+          :spacing 1
+          :class "red-folder"
+          (label
+            :class "red-label"
+            :halign "start"
+            :text "/code/"
+          )
+          (button
+            :halign "center"
+            :class "code-icon"
+            :onclick "sh -c 'eww close access-manager; ~/.config/eww/scripts/app_launch.sh code'"
+          )
+        )
+        (box
+          :orientation "v"
+          :space-evenly "false"
+          :vexpand "false"
+          :hexpand "false"
+          :halign "start"
+          :valign "start"
+          :spacing 1
+          :class "red-min-top-20"
+          (label
+            :class "red-label"
+            :halign "start"
+            :text "/usr/"
+          )
+          (button
+            :halign "center"
+            :class "user-icon"
+            :onclick "eww close access-manager & thunar /usr"
+          )
+        )
+      )
+      ; row two end
+      ; row three start
+      (box
+        :orientation "h"
+        :space-evenly "false"
+        :vexpand "false"
+        :hexpand "false"
+        :halign "center"
+        :spacing 50
+        :class "row-1"
+        (box
+          :orientation "v"
+          :space-evenly "false"
+          :vexpand "false"
+          :hexpand "false"
+          :halign "start"
+          :valign "start"
+          :spacing 1
+          :class "white-folder"
+          (label
+            :class "white-label"
+            :halign "start"
+            :text "/media/"
+          )
+          (button
+            :halign "center"
+            :class "media-icon"
+            :onclick "eww close access-manager & thunar /media"
+          )
+        )
+        (box
+          :orientation "v"
+          :space-evenly "false"
+          :vexpand "false"
+          :hexpand "false"
+          :halign "start"
+          :valign "start"
+          :spacing 1
+          :class "blue-min-top-15"
+          (label
+            :class "blue-label"
+            :halign "start"
+            :text "/mnt/"
+          )
+          (button
+            :halign "center"
+            :onclick "eww close access-manager & thunar /mnt"
+            :class "mnt-icon"
+          )
+        )
+        
+        (box
+          :orientation "v"
+          :space-evenly "false"
+          :vexpand "false"
+          :hexpand "false"
+          :halign "start"
+          :valign "start"
+          :spacing 1
+          :class "red-folder"
+          (label
+            :class "red-label"
+            :halign "start"
+            :text "/root/"
+          )
+          (button
+            :halign "center"
+            :class "root-icon"
+            :onclick "eww close access-manager & thunar /root"
+            
+          )
+        )
+        
+        (box
+          :orientation "v"
+          :space-evenly "false"
+          :vexpand "false"
+          :hexpand "false"
+          :halign "start"
+          :valign "start"
+          :spacing 1
+          :class "blue-min-top-20"
+          (label
+            :class "blue-label"
+            :halign "start"
+            :text "/opt/"
+          )
+          (button
+            :halign "center"
+            :class "opt-icon"
+            :onclick "eww close access-manager & thunar /opt"
+            
+          )
+        )
+        
+        (box
+          :orientation "v"
+          :space-evenly "false"
+          :vexpand "false"
+          :hexpand "false"
+          :halign "start"
+          :valign "start"
+          :spacing 1
+          :class "blue-folder"
+          (label
+            :class "blue-label"
+            :halign "start"
+            :text "/sbin/"
+          )
+          (button
+            :halign "center"
+            :class "sbinx-icon"
+            :onclick "eww close access-manager & thunar /sbin"
+            
+          )
+        )
+        (box
+          :orientation "v"
+          :space-evenly "false"
+          :vexpand "false"
+          :hexpand "false"
+          :halign "start"
+          :valign "start"
+          :spacing 1
+          :class "blue-min-top-20"
+          (label
+            :class "blue-label"
+            :halign "start"
+            :text "/srv/"
+          )
+          (button
+            :halign "center"
+            :class "srv-icon"
+            :onclick "eww close access-manager & thunar /srv"
+            
+          )
+        )
+        
+        (box
+          :orientation "v"
+          :space-evenly "false"
+          :vexpand "false"
+          :hexpand "false"
+          :halign "start"
+          :valign "start"
+          :spacing 1
+          :class "blue-folder"
+          (button
+            :class "blue-label"
+            :halign "start"
+            :text "/tmp/"
+          )
+          (button
+            :halign "center"
+            :class "tmp-icon"
+            :onclick "eww close access-manager & thunar /tmp"
+            
+          )
+        )
+        (box
+          :orientation "v"
+          :space-evenly "false"
+          :vexpand "false"
+          :hexpand "false"
+          :halign "start"
+          :valign "start"
+          :spacing 1
+          :class "red-min-top-20"
+          (label
+            :class "red-label"
+            :halign "start"
+            :text "/obs/"
+          )
+          (button
+            :halign "center"
+            :class "obs-icon"
+            :onclick "sh -c 'eww close access-manager; ~/.config/eww/scripts/app_launch.sh obs'"
+            
+          )
+        )
+      )
+      ; row three end
+      ; row four start
+      (box
+        :orientation "h"
+        :space-evenly "false"
+        :vexpand "false"
+        :hexpand "false"
+        :halign "center"
+        :spacing 50
+        :class "row-1"
+        (box
+          :orientation "v"
+          :space-evenly "false"
+          :vexpand "false"
+          :hexpand "false"
+          :halign "start"
+          :valign "start"
+          :spacing 1
+          :class "blue-folder"
+          (label
+            :class "blue-label"
+            :halign "start"
+            :text "/sys/"
+          )
+          (button
+            :halign "center"
+            :class "libs-icon"
+            :onclick "eww close access-manager & thunar /sys"
+            
+          )
+        )
+        (box
+          :orientation "v"
+          :space-evenly "false"
+          :vexpand "false"
+          :hexpand "false"
+          :halign "start"
+          :valign "start"
+          :spacing 1
+          :class "white-min-top-20"
+          (label
+            :class "white-label"
+            :halign "start"
+            :text "/home/"
+          )
+          (button
+            :halign "center"
+            :class "home-icon"
+            :onclick "eww close access-manager & thunar /home"
+            
+          )
+        )
+        
+        (box
+          :orientation "v"
+          :space-evenly "false"
+          :vexpand "false"
+          :hexpand "false"
+          :halign "start"
+          :valign "start"
+          :spacing 1
+          :class "yellow-folder"
+          (label
+            :class "yellow-label"
+            :halign "start"
+            :text "/etc/"
+          )
+          (button
+            :halign "center"
+            :class "etc-icon"
+            :onclick "eww close access-manager & thunar /etc"
+            
+          )
+        )
+        
+        (box
+          :orientation "v"
+          :space-evenly "false"
+          :vexpand "false"
+          :hexpand "false"
+          :halign "start"
+          :valign "start"
+          :spacing 1
+          :class "cpu-folder"
+          (button
+            :valign "center"
+            :halign "center"
+            :text "cpu"
+            :class "cpu-icon"
+            :onclick "eww close access-manager & thunar /"
+            
+          )
+          
+        )
+        
+        (box
+          :orientation "v"
+          :space-evenly "false"
+          :vexpand "false"
+          :hexpand "false"
+          :halign "start"
+          :valign "start"
+          :spacing 1
+          :class "red-folder"
+          (label
+            :class "red-label"
+            :halign "start"
+            :text "/share/"
+          )
+          (button
+            :halign "center"
+            :class "bins-icon"
+            :onclick "eww close access-manager & thunar /usr/share"
+          )
+        )
+        
+        
+        (box
+          :orientation "v"
+          :space-evenly "false"
+          :vexpand "false"
+          :hexpand "false"
+          :halign "start"
+          :valign "start"
+          :spacing 1
+          :class "blue-min-top-20"
+          (label
+            :class "blue-label"
+            :halign "start"
+            :text "/boot/"
+          )
+          (button
+            :halign "center"
+            :class "boot-icon"
+            :onclick "eww close access-manager & thunar /boot"
+          )
+        )
+        
+        (box
+          :orientation "v"
+          :space-evenly "false"
+          :vexpand "false"
+          :hexpand "false"
+          :halign "start"
+          :valign "start"
+          :spacing 1
+          :class "red-folder"
+          (label
+            :class "red-label"
+            :halign "start"
+            :text "/dev/"
+          )
+          (button
+            :halign "center"
+            :class "dev-icon"
+            :onclick "eww close access-manager & thunar /dev"
+          )
+        )
+      )
+      ; row four end
+    )
+  )
+)
+
+

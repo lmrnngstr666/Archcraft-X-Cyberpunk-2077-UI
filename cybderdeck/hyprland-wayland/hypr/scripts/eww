@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+CONFIG_DIR="$HOME/.config/eww"
+
+bash "$CONFIG_DIR"/scripts/pewwclean.sh
+echo "[+] Cleanup Temporary Done."
+sleep 1
+ 
+bash "$CONFIG_DIR"/scripts/run_eww.sh
+echo "[+] Startup Eww & Script Done."
+
+
+
+export EWW_CONFIG_DIR="${CONFIG_DIR}"
+
+  
+
+

@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+CONFIG_DIR="$HOME/.config/eww"
+
+# Cek apakah eww daemon sudah berjalan, jika belum maka jalankan
+if ! pgrep -x "eww" > /dev/null; then
+    eww daemon --config "$CONFIG_DIR"
+    sleep 0.5  # beri waktu sedikit agar daemon siap
+fi
+
+# Jika window access-manager belum terbuka, buka
+if ! eww windows --config "$CONFIG_DIR" | grep -q "*access-manager"; then
+    eww open access-manager --config "$CONFIG_DIR"
+else
+    echo "Window 'access-manager' sudah terbuka."
+fi

@@ -1,0 +1,532 @@
+(defpoll out_left_top :interval "0.9s"
+  "bash ~/.config/eww/scripts/out_left_top.sh"
+)
+
+(defpoll total_update :interval "10"
+  "bash ~/.config/eww/scripts/checkupdates"
+)
+
+(defpoll anim_bin :interval "1.2s"
+  "bash ~/.config/eww/scripts/bin_anim.sh"
+)
+
+(defpoll anim_dots :interval "1.4s"
+  "bash ~/.config/eww/scripts/dot_anim.sh"
+)
+
+(defpoll bin_line :interval "0.5s"
+  "bash ~/.config/eww/scripts/bin_line.sh"
+)
+
+(defpoll code_anim :interval "0.5s"
+  "bash ~/.config/eww/scripts/code_anim.sh"
+)
+
+(defpoll code_bin :interval "1.7s"
+  "bash ~/.config/eww/scripts/code_bin.sh"
+)
+
+(defpoll skull_anim :interval "0.5s"
+  "bash ~/.config/eww/scripts/skull.sh"
+)
+
+(defpoll time_custom :interval "60s"
+  "~/.config/eww/scripts/custom-date.sh"
+)
+
+(defpoll UPTIME :interval "5s" `uptime -p | cut -d' ' -f2- | sed 's/,//g' | awk '{print $1 " " $2}'`)
+(defpoll UPMIN :interval "5s" `uptime -p | cut -d' ' -f2- | sed 's/,//g' | awk '{print $3 " " $4}'`)
+
+(defwindow frame-left
+  :monitor 0
+  :anchor "start left"
+  :geometry (geometry
+    :x "0px"
+    :y "0px"
+    :width "20px"
+    :height "70%"
+  )
+  (frame-left-widget)
+)
+
+(defwidget frame-left-widget []
+  (box
+    :orientation "vertical"
+    :halign "center"
+    (label
+      :text out_left_top
+      :angle 90.0
+      :class "out-left-text"
+    )
+    (label
+      :text "00032 05 54 DB CP 00032 05 54 DB CP"
+      :angle 90.0
+      :class "out-left-text-center"
+    )
+  )
+)
+
+(defwindow frame-right
+  :monitor 0
+  :anchor "bottom left"
+  :stacking "fg"
+  :geometry (geometry
+    :x "1317px"
+    :y "0px"
+    :width "40px"
+    :height "100%"
+  )
+  (frame-right-widget)
+)
+
+(defwidget frame-right-widget []
+  (box
+    :orientation "vertical"
+    :halign "center"
+    (label
+      :text anim_bin
+      :angle 0.0
+      :class "out-frame-bin"
+    )
+    (label
+      :text anim_dots
+      :angle -90.0
+      :class "out-frame-dot"
+    )
+  )
+)
+
+(defwindow binline-frame-right
+  :monitor 0
+  :anchor "center"
+  :geometry (geometry
+    :x "1312px"
+    :y "119px"
+    :width "40px"
+    :height "92px"
+  )
+  (binline-widget-right)
+)
+
+(defwidget binline-widget-right []
+  (box
+    :orientation "vertical"
+    :halign "center"
+    (label
+      :text bin_line
+      :angle 0.0
+      :class "line-frame-bin"
+    )
+  )
+)
+
+(defwindow bottom-indicator
+  :monitor 0
+  :windowtype "dock"
+  :geometry (geometry
+    :x "0%"
+    :y "0%"
+    :width "90%"
+    :height "20px"
+    :anchor "bottom left"
+  )
+  :reserve (struts
+    :side "bottom"
+    :distance "4%"
+  )
+  (bottom-indicators)
+)
+
+(defwidget bottom-indicators []
+  (box
+    :orientation "h"
+    :halign "start"
+    :valign "center"
+    :spacing 1
+    :class "bottom-indicators"
+    (box
+      :orientation "h"
+      :halign "start"
+      :valign "center"
+      :spacing 1
+      :class "bettrybox"
+      (label
+        :text "bat_anim"
+        :angle 0.0
+        :class "bat_anim"
+      )
+    )
+    (label
+      :text code_anim
+      :angle 0.0
+      :class "code-anim-bottom"
+    )
+    (label
+      :text code_bin
+      :angle 0.0
+      :class "code-bin-bottom"
+    )
+  )
+)
+
+(defwindow skull
+  :monitor 0
+  :anchor "bottom left"
+  :stacking "fg"
+  :geometry (geometry
+    :x "67px"
+    :y "690px"
+    :width "40px"
+    :height "40px"
+  )
+  (skull-widget)
+)
+
+(defwidget skull-widget []
+  (box
+    :orientation "vertical"
+    :halign "center"
+    (label
+      :text skull_anim
+      :angle 0.0
+      :class "skull-anim"
+    )
+  )
+)
+
+(include "./widget/home.yuck")
+(include "./widget/decor.yuck")
+(defwindow home-screen
+  :monitor 0
+  :anchor "c c"
+  :stacking "bg"
+  :geometry (geometry :x 35 :y 5
+    :width 1280
+    :height 690
+  )
+  (overlay
+    
+    (date-frame-blink)
+    (date-rame-rl)
+    (date-bg)
+    (uptimes)
+    (home-screen-decor)
+    (home-screen-widget)
+  )
+)
+
+(include "./widget/access.yuck")
+(include "./widget/lines.yuck")
+(defwindow access-manager
+  :monitor 0
+  :anchor "c c"
+  :stacking "fg"
+  :geometry (geometry :x 35 :y 5
+    :width 1280    :height 690
+  )
+  (overlay
+    (main-bg)
+    (var-cache-line)
+    (var-log-line)
+    (var-spool-line)
+    (var-temp-line)
+    (user-bin-line)
+    (user-include-line)
+    (user-lib-line)
+    (user-sbin-line)
+    (user-sudo-line)
+    (sudo-alacritty-line)
+    (sudo-thunar-line)
+    (sudo-vim-line)
+    (sudo-ranger-line)
+    (sudo-geany-line)
+    (sudo-code-line)
+    (libs-line)
+    (home-line)
+    (etc-line)
+    (media-line)
+    (mnt-line)
+    (var-line)
+    (opt-line)
+    (sbinx-line)
+    (user-line)
+    (srv-line)
+    (tmp-line)
+    (binx-line)
+    (boot-line)
+    (dev-line)
+    (footer)
+    (access-manager-widget)
+  )
+)
+
+(defwindow scanner-left
+  :monitor 0
+  :anchor "bottom center"
+  :stacking "fg"
+  :geometry (geometry
+    :x "10px"
+    :y "-5%"
+    :width "10px"
+    :height "100%"
+  )
+  (scanner-left-widget)
+)
+
+(defwidget scanner-left-widget []
+  (box
+    :orientation "v"
+    :halign "center"
+    :valign "center"
+    :spacing 10
+    :class "scan-wrap"
+    (box
+      :orientation "v"
+      :halign "center"
+      :valign "center"
+      :spacing 0
+      :class "run-top"
+      (box
+        :orientation "v"
+        :halign "center"
+        :valign "start"
+        :spacing 0
+        :class "run-top-big"
+      )
+      (box
+        :orientation "v"
+        :halign "center"
+        :valign "start"
+        :spacing 0
+        :class "run-top-medium"
+      )
+      (box
+        :orientation "v"
+        :halign "center"
+        :valign "start"
+        :spacing 0
+        :class "run-top-medium4"
+      )
+      (box
+        :orientation "v"
+        :halign "center"
+        :valign "start"
+        :spacing 0
+        :class "run-top-medium3"
+      )
+      (box
+        :orientation "v"
+        :halign "center"
+        :valign "start"
+        :spacing 0
+        :class "run-top-medium2"
+      )
+      (box
+        :orientation "v"
+        :halign "center"
+        :valign "start"
+        :spacing 0
+        :class "run-top-medium1"
+      )
+      (box
+        :orientation "v"
+        :halign "center"
+        :valign "start"
+        :spacing 0
+        :class "run-top-small"
+      )
+    )
+    (box
+      :orientation "v"
+      :halign "center"
+      :valign "center"
+      :spacing 0
+      :class "run-bottom"
+      (box
+        :orientation "v"
+        :halign "center"
+        :valign "end"
+        :spacing 0
+        :class "run-bottom-small"
+      )
+      (box
+        :orientation "v"
+        :halign "center"
+        :valign "end"
+        :spacing 0
+        :class "run-bottom-medium1"
+      )
+      (box
+        :orientation "v"
+        :halign "center"
+        :valign "end"
+        :spacing 0
+        :class "run-bottom-medium2"
+      )
+      (box
+        :orientation "v"
+        :halign "center"
+        :valign "end"
+        :spacing 0
+        :class "run-bottom-medium3"
+      )
+      (box
+        :orientation "v"
+        :halign "center"
+        :valign "end"
+        :spacing 0
+        :class "run-bottom-medium4"
+      )
+      (box
+        :orientation "v"
+        :halign "center"
+        :valign "end"
+        :spacing 0
+        :class "run-bottom-medium"
+      )
+      (box
+        :orientation "v"
+        :halign "center"
+        :valign "end"
+        :spacing 0
+        :class "run-bottom-big"
+      )
+    )
+  )
+)
+
+
+(defwindow scanner-right
+  :monitor 0
+  :anchor "bottom center"
+  :stacking "fg"
+  :geometry (geometry
+    :x "1347px"
+    :y "-5%"
+    :width "10px"
+    :height "100%"
+  )
+  (scanner-right-widget)
+)
+
+(defwidget scanner-right-widget []
+  (box
+    :orientation "v"
+    :halign "center"
+    :valign "center"
+    :spacing 10
+    :class "scan-wrap"
+    (box
+      :orientation "v"
+      :halign "center"
+      :valign "center"
+      :spacing 0
+      :class "run-top"
+      (box
+        :orientation "v"
+        :halign "center"
+        :valign "center"
+        :spacing 0
+        :class "run-top-big"
+      )
+      (box
+        :orientation "v"
+        :halign "center"
+        :valign "center"
+        :spacing 0
+        :class "run-top-medium"
+      )
+      (box
+        :orientation "v"
+        :halign "center"
+        :valign "center"
+        :spacing 0
+        :class "run-bottom-medium4"
+      )
+      (box
+        :orientation "v"
+        :halign "center"
+        :valign "center"
+        :spacing 0
+        :class "run-bottom-medium3"
+      )
+      (box
+        :orientation "v"
+        :halign "center"
+        :valign "center"
+        :spacing 0
+        :class "run-bottom-medium2"
+      )
+      (box
+        :orientation "v"
+        :halign "center"
+        :valign "center"
+        :spacing 0
+        :class "run-bottom-medium1"
+      )
+      (box
+        :orientation "v"
+        :halign "center"
+        :valign "center"
+        :spacing 0
+        :class "run-top-small"
+      )
+    )
+    (box
+      :orientation "v"
+      :halign "center"
+      :valign "center"
+      :spacing 0
+      :class "run-bottom"
+      (box
+        :orientation "v"
+        :halign "center"
+        :valign "center"
+        :spacing 0
+        :class "run-bottom-small"
+      )
+      (box
+        :orientation "v"
+        :halign "center"
+        :valign "center"
+        :spacing 0
+        :class "run-bottom-medium1"
+      )
+      (box
+        :orientation "v"
+        :halign "center"
+        :valign "center"
+        :spacing 0
+        :class "run-bottom-medium2"
+      )
+      (box
+        :orientation "v"
+        :halign "center"
+        :valign "center"
+        :spacing 0
+        :class "run-bottom-medium3"
+      )
+      (box
+        :orientation "v"
+        :halign "center"
+        :valign "center"
+        :spacing 0
+        :class "run-bottom-medium4"
+      )
+      (box
+        :orientation "v"
+        :halign "center"
+        :valign "center"
+        :spacing 0
+        :class "run-bottom-medium"
+      )
+      (box
+        :orientation "v"
+        :halign "center"
+        :valign "center"
+        :spacing 0
+        :class "run-bottom-big"
+      )
+    )
+  )
+)

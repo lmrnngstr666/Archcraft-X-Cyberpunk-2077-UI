@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+ 
+CONFIG="$HOME/.config/swaync/config.json"
+
+# Start swaync only if not already running
+if ! pidof swaync > /dev/null; then
+    GDK_BACKEND=wayland swaync --config "$CONFIG" &
+fi
+

@@ -1,0 +1,923 @@
+* {
+  all: unset;
+}
+
+.out-left-text {
+  font-size: 8px;
+  background: none;
+  color: #752b2a;
+  font-family: monospace;
+}
+.out-left-text-center {
+  font-size: 7px;
+  background: none;
+  color: #48201f;
+  font-family: rajdhani;
+  font-weight: bold;
+}
+.out-frame {
+  font-size: 10px;
+  background: none;
+  color: #452d37;
+  font-family: monospace;
+}
+.out-frame-bin {
+  font-size: 8px;
+  background: none;
+  font-weight: 600;
+  color: #752b2a;
+  font-family: rajdhani;
+}
+.out-frame-dot {
+  font-size: 22px;
+  letter-spacing: -4px;
+  padding-left: 7px;
+  background: none;
+  color: #69302d;
+  font-family: monospace;
+}
+.line-frame-bin {
+  font-size: 4px;
+  background: none;
+  color: #3e592f;
+  font-family: monospace;
+}
+
+.bat_anim {
+  background-image: url("/home/mrnngstr666/.config/eww/icons/battery.png");
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
+  font-size: 12px;
+  color: transparent;
+  margin-left: 20px;
+  // border: 1px solid blue;
+}
+
+.code-anim-bottom {
+  font-size: 4px;
+  background: none;
+  color: #752b2a;
+  font-weight: 700;
+  font-family: Rajdhani;
+}
+.code-bin-bottom {
+  font-size: 5px;
+  background: none;
+  color: #752b2a;
+  font-weight: 700;
+  font-family: Rajdhani;
+}
+.skull-anim {
+  font-size: 17px;
+  background: none;
+  color: #752b2a;
+}
+// Radio Station
+
+.radio-head {
+  font-family: Rajdhani;
+  font-weight: 600;
+  font-size: 16px;
+  // color: #599e34;
+  color: #b5eceb;
+}
+
+.now-playing {
+  font-size: 7px;
+  font-weight: 600;
+  color: #d45737;
+  padding-left: 155px;
+  font-family: Rajdhani;
+}
+
+.album_art {
+  background-size: 140px;
+  background-repeat: no-repeat;
+  min-height: 140px;
+  min-width: 140px;
+  border: 1px solid #d45737;
+}
+.radio-info {
+  border-top: 1px solid #d45737;
+  border-bottom: 1px solid #d45737;
+  min-width: 260px;
+  margin-left: 12px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+.song {
+  color: #8fbcbb;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Rajdhani;
+  padding: 0px;
+}
+
+.artist {
+  color: #5fa13c;
+  font-size: 20px;
+  font-family: Rajdhani;
+  font-weight: 600;
+}
+
+.control-top {
+  margin-top: 40px;
+}
+.control-label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #5fa13c;
+  font-family: Rajdhani;
+}
+
+.btn_enter {
+  color: #ebcb8b;
+  font-size: 14px;
+  font-weight: 600;
+  border: 2px solid #ebcb8b;
+  border-radius: 5px;
+  padding: 5px 4px 2px 4px;
+}
+
+.btn_close {
+  color: #ebcb8b;
+  font-size: 12px;
+  font-weight: 600;
+  border: 2px solid #ebcb8b;
+  border-radius: 5px;
+  padding: 3px 2px;
+}
+
+.btn_prev,
+.btn_play,
+.btn_next {
+  padding: 0px 6px;
+  font-family: Rajdhani;
+}
+.btn_prev {
+  color: #ebcb8b;
+  font-size: 10px;
+  font-weight: 600;
+  border: 2px solid #ebcb8b;
+  border-radius: 5px;
+}
+
+.btn_play {
+  color: #ebcb8b;
+  font-size: 10px;
+  font-weight: 600;
+  border: 2px solid #ebcb8b;
+  border-radius: 5px;
+}
+.btn_next {
+  color: #ebcb8b;
+  font-size: 10px;
+  font-weight: 600;
+  border: 2px solid #ebcb8b;
+  border-radius: 5px;
+}
+
+.music_bar scale trough highlight {
+  all: unset;
+  background-color: #b48ead;
+  border-radius: 8px;
+}
+
+.radio-list {
+  font-size: 16px;
+  font-family: Rajdhani;
+  font-weight: 500;
+  color: #d45737;
+}
+
+.list {
+  padding: 10px 0px;
+}
+.radio-footer {
+  min-width: 415px;
+  padding-top: 5px;
+}
+.radio-footer-label {
+  font-size: 6px;
+  font-weight: 600;
+  color: #d45737;
+  font-family: Rajdhani;
+}
+
+.radio-footer-button {
+  font-size: 16px;
+  font-weight: 600;
+  color: #cde0c2;
+  font-family: Rajdhani;
+}
+
+.list-scroll {
+  min-width: 300px;
+}
+
+.red-min-top-20 {
+  margin-top: -20px;
+  min-width: 78px;
+  min-height: 84px;
+  padding: 0px;
+  background-image: url("./images/access/folder/red-folder.png");
+  background-repeat: no-repeat;
+}
+.yellow-min-top-20 {
+  margin-top: -20px;
+  min-width: 78px;
+  min-height: 84px;
+  padding: 0px;
+  background-image: url("./images/access/folder/yellow-folder.png");
+  background-repeat: no-repeat;
+}
+.white-min-top-20 {
+  margin-top: -20px;
+  min-width: 78px;
+  min-height: 84px;
+  padding: 0px;
+  background-image: url("./images/access/folder/white-folder.png");
+  background-repeat: no-repeat;
+}
+.blue-min-top-20 {
+  margin-top: -20px;
+  min-width: 78px;
+  min-height: 84px;
+  padding: 0px;
+  background-image: url("./images/access/folder/blue-folder.png");
+  background-repeat: no-repeat;
+}
+.blue-min-top-15 {
+  margin-top: -15px;
+  min-width: 78px;
+  min-height: 84px;
+  padding: 0px;
+  background-image: url("./images/access/folder/blue-folder.png");
+  background-repeat: no-repeat;
+}
+.main-bg {
+  background-color: #0e111b;
+  min-width: 1294px;
+  min-height: 690px;
+}
+.white-folder {
+  min-width: 78px;
+  min-height: 84px;
+  padding: 0px;
+  background-image: url("./images/access/folder/white-folder.png");
+  background-repeat: no-repeat;
+}
+.blue-folder {
+  min-width: 78px;
+  min-height: 84px;
+  padding: 0px;
+  background-image: url("./images/access/folder/blue-folder.png");
+  background-repeat: no-repeat;
+}
+.red-folder {
+  min-width: 78px;
+  min-height: 84px;
+  padding: 0px;
+  background-image: url("./images/access/folder/red-folder.png");
+  background-repeat: no-repeat;
+}
+.yellow-folder {
+  min-width: 78px;
+  min-height: 84px;
+  padding: 0px;
+  background-image: url("./images/access/folder/yellow-folder.png");
+  background-repeat: no-repeat;
+}
+
+.blue-label {
+  font-size: 7px;
+  font-weight: 600;
+  // border: 1px solid #ebcb8b;
+  min-height: 7px;
+  color: #42476d;
+  padding-left: 8px;
+}
+
+.red-label {
+  font-size: 7px;
+  font-weight: 600;
+  // border: 1px solid #ebcb8b;
+  min-height: 7px;
+  color: #c45c54;
+  padding-left: 8px;
+}
+.yellow-label {
+  font-size: 7px;
+  font-weight: 600;
+  // border: 1px solid #ebcb8b;
+  min-height: 7px;
+  color: #f0b537;
+  padding-left: 8px;
+}
+.white-label {
+  font-size: 7px;
+  font-weight: 600;
+  // border: 1px solid #ebcb8b;
+  min-height: 7px;
+  color: #2bffff;
+  padding-left: 8px;
+}
+.cache-icon {
+  // border: 1px solid #ebcb8b;
+  min-width: 45px;
+  min-height: 65px;
+  background-image: url("./images/access/icons/var-cache-icon.png");
+  background-repeat: no-repeat;
+}
+.log-icon {
+  // border: 1px solid #ebcb8b;
+  min-width: 60px;
+  min-height: 65px;
+  background-image: url("./images/access/icons/var-log-icon.png");
+  background-repeat: no-repeat;
+}
+.spool-icon {
+  // border: 1px solid #ebcb8b;
+  min-width: 62px;
+  min-height: 65px;
+  background-image: url("./images/access/icons/var-spool-icon.png");
+  background-repeat: no-repeat;
+}
+.temp-icon {
+  // border: 1px solid #ebcb8b;
+  min-width: 62px;
+  min-height: 65px;
+  background-image: url("./images/access/icons/var-temp-icon.png");
+  background-repeat: no-repeat;
+}
+
+.bin-icon {
+  // border: 1px solid #ebcb8b;
+  min-width: 62px;
+  min-height: 65px;
+  background-image: url("./images/access/icons/user-bin-icon.png");
+  background-repeat: no-repeat;
+}
+
+.include-icon {
+  // border: 1px solid #ebcb8b;
+  min-width: 57px;
+  min-height: 65px;
+  background-image: url("./images/access/icons/user-include-icon.png");
+  background-repeat: no-repeat;
+}
+
+.lib-icon {
+  // border: 1px solid #ebcb8b;
+  min-width: 57px;
+  min-height: 65px;
+  background-image: url("./images/access/icons/user-lib-icon.png");
+  background-repeat: no-repeat;
+}
+.usbin-icon {
+  // border: 1px solid #ebcb8b;
+  min-width: 57px;
+  min-height: 65px;
+  background-image: url("./images/access/icons/user-sbin-icon.png");
+  background-repeat: no-repeat;
+}
+// row two
+.var-icon {
+  // border: 1px solid #ebcb8b;
+  min-width: 57px;
+  min-height: 65px;
+  background-image: url("./images/access/icons/var-icon.png");
+  background-repeat: no-repeat;
+}
+
+.kitty-icon {
+  // border: 1px solid #ebcb8b;
+  // margin-top: 5px;
+  min-width: 49px;
+  min-height: 56px;
+  background-image: url("./images/access/icons/kitty-icon.svg");
+  background-repeat: no-repeat;
+}
+.thunar-icon {
+  // border: 1px solid #ebcb8b;
+  min-width: 52px;
+  margin-top: 5px;
+  min-height: 65px;
+  background-image: url("./images/access/icons/sudo-thunar-icon.png");
+  background-repeat: no-repeat;
+}
+.geany-icon {
+  // border: 1px solid #ebcb8b;
+  min-width: 52px;
+  margin-top: 5px;
+  min-height: 65px;
+  background-image: url("./images/access/icons/sudo-geany-icon.png");
+  background-repeat: no-repeat;
+}
+.firefox-icon {
+  // border: 1px solid #ebcb8b;
+  margin-top: 5px;
+  min-width: 55px;
+  min-height: 56px;
+  background-image: url("./images/access/icons/firefox-icon.svg");
+  background-repeat: no-repeat;
+}
+
+.vim-icon {
+  // border: 1px solid #ebcb8b;
+  min-width: 52px;
+  margin-top: 5px;
+  min-height: 65px;
+  background-image: url("./images/access/icons/sudo-vim-icon.png");
+  background-repeat: no-repeat;
+}
+
+.code-icon {
+  // border: 1px solid #ebcb8b;
+  min-width: 52px;
+  margin-top: 5px;
+  min-height: 65px;
+  background-image: url("./images/access/icons/sudo-code-icon.png");
+  background-repeat: no-repeat;
+}
+.user-icon {
+  // border: 1px solid #ebcb8b;
+  min-width: 52px;
+  min-height: 60px;
+  background-image: url("./images/access/icons/user-icon.png");
+  background-repeat: no-repeat;
+}
+.media-icon {
+  // border: 1px solid #ebcb8b;
+  min-width: 52px;
+  min-height: 60px;
+  background-image: url("./images/access/icons/media-icon.png");
+  background-repeat: no-repeat;
+}
+
+.mnt-icon {
+  // border: 1px solid #ebcb8b;
+  min-width: 62px;
+  min-height: 65px;
+  background-image: url("./images/access/icons/mnt-icon.png");
+  background-repeat: no-repeat;
+}
+.srv-icon {
+  // border: 1px solid #ebcb8b;
+  min-width: 62px;
+  min-height: 65px;
+  background-image: url("./images/access/icons/srv-icon.png");
+  background-repeat: no-repeat;
+}
+
+.sbinx-icon {
+  // border: 1px solid #ebcb8b;
+  min-width: 62px;
+  min-height: 65px;
+  background-image: url("./images/access/icons/sbin-icon.png");
+  background-repeat: no-repeat;
+}
+.root-icon {
+  // border: 1px solid #ebcb8b;
+  min-width: 68px;
+  min-height: 55px;
+  margin-top: 10px;
+  background-image: url("./images/access/icons/root-icon.png");
+  background-repeat: no-repeat;
+}
+.opt-icon {
+  // border: 1px solid #ebcb8b;
+  min-width: 40px;
+  min-height: 65px;
+  background-image: url("./images/access/icons/opt-icon.png");
+  background-repeat: no-repeat;
+}
+.sbin-icon {
+  // border: 1px solid #ebcb8b;
+  min-width: 68px;
+  min-height: 65px;
+  background-image: url("./images/access/icons/sbin-icon.png");
+  background-repeat: no-repeat;
+}
+.tmp-icon {
+  // border: 1px solid #ebcb8b;
+  min-width: 66px;
+  min-height: 65px;
+  background-image: url("./images/access/icons/tmp-icon.png");
+  background-repeat: no-repeat;
+}
+.obs-icon {
+  // border: 1px solid #ebcb8b;
+  min-width: 57px;
+  margin-top: 4px;
+  min-height: 57px;
+  background-image: url("./images/access/icons/obs-icon.svg");
+  background-repeat: no-repeat;
+}
+.libs-icon {
+  // border: 1px solid #ebcb8b;
+  min-width: 45px;
+  min-height: 65px;
+  background-image: url("./images/access/icons/lib-icon.png");
+  background-repeat: no-repeat;
+}
+.home-icon {
+  // border: 1px solid #ebcb8b;
+  min-width: 55px;
+  min-height: 65px;
+  margin-top: 4px;
+  background-image: url("./images/access/icons/home-icon.png");
+  background-repeat: no-repeat;
+}
+.etc-icon {
+  // border: 1px solid #ebcb8b;
+  min-width: 60px;
+  min-height: 65px;
+  background-image: url("./images/access/icons/etc-icon.png");
+  background-repeat: no-repeat;
+}
+
+.cpu-folder {
+  min-width: 99px;
+  min-height: 98px;
+  background-image: url("./images/access/folder/root-folder.png");
+  background-repeat: no-repeat;
+}
+.cpu-icon {
+  // border: 1px solid #ebcb8b;
+  min-width: 78px;
+  min-height: 65px;
+  margin-top: 20px;
+  margin-left: 25px;
+  background-image: url("./images/access/icons/cpu-kernel.png");
+  background-repeat: no-repeat;
+  font-size: 20px;
+}
+
+.bins-icon {
+  // border: 1px solid #ebcb8b;
+  min-width: 50px;
+  min-height: 55px;
+  margin-top: 10px;
+  background-image: url("./images/access/icons/bin-icon.png");
+  background-repeat: no-repeat;
+}
+
+.boot-icon {
+  // border: 1px solid #ebcb8b;
+  min-width: 55px;
+  min-height: 65px;
+  background-image: url("./images/access/icons/boot-icon.png");
+  background-repeat: no-repeat;
+}
+
+.dev-icon {
+  // border: 1px solid #ebcb8b;
+  min-width: 55px;
+  min-height: 65px;
+  background-image: url("./images/access/icons/dev-icon.png");
+  background-repeat: no-repeat;
+}
+
+.header {
+  border-bottom: 1px solid red;
+  min-height: 40px;
+  min-width: 1280px;
+}
+.access-icon {
+  min-width: 35px;
+}
+.logo-bin {
+  padding-bottom: 2px;
+}
+.titletop {
+  font-size: 7px;
+  font-weight: 400;
+  margin-bottom: -4px;
+  font-family: Orbitron;
+  color: #b6801b;
+}
+.title {
+  all: unset;
+  font-size: 20px;
+  font-weight: 600;
+  color: #54ced4;
+  margin-bottom: -4px;
+  font-family: Rajdhani;
+}
+
+.protocol-icon {
+  min-width: 97px;
+  margin-bottom: -5px;
+  min-height: 40px;
+}
+
+// lines
+.var-cache-line {
+  margin-left: 107px;
+  margin-top: 130px;
+}
+
+.var-log-line {
+  margin-left: 128px;
+  margin-top: 116px;
+}
+
+.var-spool-line {
+  margin-left: 183px;
+  margin-top: 119px;
+}
+
+.var-temp-line {
+  margin-left: 183px;
+  margin-top: 118px;
+}
+.user-bin-line {
+  margin-right: 183px;
+  margin-top: 134px;
+}
+.user-include-line {
+  margin-right: 183px;
+  margin-top: 99px;
+}
+.user-lib-line {
+  margin-right: 155px;
+  margin-top: 115px;
+}
+.user-sbin-line {
+  margin-right: 140px;
+  margin-top: 149px;
+}
+.user-sudo-line {
+  margin-right: 127px;
+  margin-top: 301px;
+}
+.sudo-code-line {
+  margin-right: 211px;
+  margin-top: 288px;
+}
+.sudo-alacritty-line {
+  margin-right: 139px;
+  margin-top: 177px;
+}
+.sudo-thunar-line {
+  margin-right: 201px;
+  margin-top: 191px;
+}
+.sudo-vim-line {
+  margin-right: 224px;
+  margin-top: 249px;
+  min-width: 166px;
+  min-height: 113px;
+}
+.sudo-geany-line {
+  margin-right: 242px;
+  margin-top: 268px;
+}
+.sudo-ranger-line {
+  margin-right: 242px;
+  margin-top: 276px;
+}
+// bottom
+.libs-line {
+  margin-left: 293px;
+  margin-bottom: 44px;
+}
+
+.home-line {
+  margin-left: 410px;
+  margin-bottom: 81px;
+}
+.etc-line {
+  margin-left: 544px;
+  margin-bottom: 131px;
+}
+.media-line {
+  margin-left: 217px;
+  margin-bottom: 145px;
+}
+.mnt-line {
+  margin-left: 329px;
+  margin-bottom: 157px;
+}
+.var-line {
+  margin-left: 166px;
+  margin-bottom: 169px;
+}
+.opt-line {
+  margin-left: 614px;
+  margin-bottom: 181px;
+}
+.sbinx-line {
+  margin-left: 678px;
+  margin-bottom: 164px;
+}
+.user-line {
+  margin-right: 105px;
+  margin-bottom: 134px;
+}
+
+.srv-line {
+  margin-right: 497px;
+  margin-bottom: 154px;
+}
+.tmp-line {
+  margin-right: 371px;
+  margin-bottom: 144px;
+}
+.binx-line {
+  margin-right: 548px;
+  margin-bottom: 123px;
+}
+.boot-line {
+  margin-right: 371px;
+  margin-bottom: 78px;
+}
+
+.dev-line {
+  margin-right: 292px;
+  margin-bottom: 54px;
+}
+
+.home-screen {
+  min-width: 1280px;
+  min-height: 690px;
+}
+
+.home-top {
+  margin-top: 32px;
+}
+.home-bottom {
+  margin: 0px 16px;
+}
+
+.border {
+  border: 1px solid red;
+}
+.uptimes {
+  margin-left: 155px;
+  margin-bottom: 77px;
+}
+
+.date-frame-blink {
+  margin-left: 28px;
+  margin-bottom: 71px;
+  animation: pulse-slow 1000ms ease-out infinite;
+}
+.datex {
+  min-width: 119px;
+  min-height: 44px;
+  // border: 1px solid red;
+  font-family: Rajdhani;
+  font-size: 28px;
+  font-weight: 600;
+  color: #ffffff;
+}
+.upmin {
+  font-family: Rajdhani;
+  font-size: 12px;
+  font-weight: 600;
+  color: #b43941;
+}
+.uptime {
+  font-family: Rajdhani;
+  font-size: 22px;
+  font-weight: 600;
+  margin-left: 24px;
+  color: #b43941;
+}
+.date-bg {
+  margin-left: 28px;
+  margin-bottom: 77px;
+}
+
+.date-rame-rl {
+  margin-left: 15px;
+  margin-bottom: 92px;
+}
+.pulse-slow {
+  animation: pulse-slow 2s ease-out infinite;
+}
+@keyframes pulse-slow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes center-to-bottom {
+  0% {
+    margin-top: 0px;
+    opacity: 1;
+  }
+  50% {
+    margin-top: 400px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0px;
+    opacity: 0;
+  }
+}
+
+@keyframes center-to-top {
+  0% {
+    margin-bottom: 0px;
+    opacity: 1;
+  }
+  50% {
+    margin-bottom: 400px;
+    opacity: 0;
+  }
+  100% {
+    margin-bottom: 0px;
+    opacity: 0;
+  }
+}
+
+.run-top {
+  animation-duration: 7s;
+  animation-name: center-to-top;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+}
+
+.run-bottom {
+  animation-name: center-to-bottom;
+  animation-duration: 7s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+}
+
+.run-top-big,
+.run-bottom-big {
+  background-color: rgba(255, 255, 255, 0.09);
+  padding: 4px 2px;
+  box-shadow: 0 0 0 1px rgba(225, 225, 225, 0.02);
+  border-radius: 40%;
+}
+.run-top-medium,
+.run-bottom-medium {
+  background-color: rgba(255, 255, 255, 0.08);
+  padding: 4px 2px;
+  box-shadow: 0 0 0 1px rgba(225, 225, 225, 0.02);
+  border-radius: 0%;
+}
+.run-top-medium4,
+.run-bottom-medium4 {
+  background-color: rgba(255, 255, 255, 0.07);
+  padding: 4px 2px;
+  box-shadow: 0 0 0 1px rgba(225, 225, 225, 0.02);
+  border-radius: 0%;
+}
+.run-top-medium3,
+.run-bottom-medium3 {
+  background-color: rgba(255, 255, 255, 0.06);
+  padding: 4px 2px;
+  box-shadow: 0 0 0 1px rgba(225, 225, 225, 0.02);
+  border-radius: 0%;
+}
+.run-top-medium2,
+.run-bottom-medium2 {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 4px 2px;
+  box-shadow: 0 0 0 1px rgba(225, 225, 225, 0.02);
+  border-radius: 0%;
+}
+.run-top-medium1,
+.run-bottom-medium1 {
+  background-color: rgba(255, 255, 255, 0.04);
+  padding: 4px 2px;
+  box-shadow: 0 0 0 1px rgba(225, 225, 225, 0.02);
+  border-radius: 0%;
+}
+
+.run-top-small,
+.run-bottom-small {
+  background-color: rgba(255, 255, 255, 0.03);
+  padding: 4px 1px;
+  box-shadow: 0 0 0 1px rgba(225, 225, 225, 0.02);
+  border-radius: 9%;
+}
+
+.center-button {
+  min-width: 152px;
+  min-height: 43px;
+  background-size: contain;
+  background-image: url("./images/home/uptime.png");
+  background-repeat: no-repeat;
+}
+
+.app-button {
+  background-image: url("./images/home/database.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-width: 292px;
+  min-height: 42px;
+}
+.database-text {
+  font-size: 12px;
+}

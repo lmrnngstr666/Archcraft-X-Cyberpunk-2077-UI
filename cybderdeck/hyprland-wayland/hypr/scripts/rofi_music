@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+
+DIR="$HOME/.config/hypr"
+RASI="$DIR/rofi/music.rasi"
+iDIR="$HOME/.config/hypr/mako/icons"
+notify_song="notify-send -h string:x-canonical-private-synchronous:sys-notify-song -u low -i ${iDIR}/music.png"
+
+run_rofi() {
+  mpc playlist | nl -w2 -s'. ' | rofi -dmenu \
+    -p "Pilih Lagu" \
+    -mesg "Playlist MPD" \
+    -theme "$RASI"
+}
+
+run_cmd() {
+  selected_line="$1"
+  selected_index=$(echo "$selected_line" | awk -F'.' '{print $1}' | xargs)
+  selected_song=$(echo "$selected_line" | cut -d'.' -f2- | xargs)
+  current_song=$(mpc current)
+
+  if [[ -n "$selected_index" ]]; then
+    if [[ "$selected_song" == "$current_song" ]]; then
+      mpc toggle
+    else
+      mpc pause
+      sleep 0.1
+      mpc play "$selected_index"
+      ${notify_song} "$selected_song"
+    fi
+  fi
+}
+
+chosen="$(run_rofi)"
+[[ -n "$chosen" ]] && run_cmd "$chosen"

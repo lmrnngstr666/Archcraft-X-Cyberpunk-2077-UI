@@ -1,3 +1,4 @@
+ HEAD
 # Archcraft-X-Cyberpunk-2077-UI
 I Using Archcraft Linux BSPWM WM
 
@@ -12,3 +13,6 @@ Copy rofi folder to ~/.config/
 Press Super + T and Select flatline themes. 
 
 I still work on other Themes, Keep Chech my Youtube Chanel or My TikTok for more Update ;)
+ 
+Cyberdeck Config. Hyprland & BSPWM
+ 70f5ab3 (hyprland and bspwm)

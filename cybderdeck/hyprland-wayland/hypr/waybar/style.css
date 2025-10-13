@@ -1,0 +1,220 @@
+/* 
+ * Copyright (C) 2020-2024 Aditya Shakya <adi1090xgmail.com>
+*/
+
+/** ********** Import Colors ********** **/
+/* import "./colors.css"; */
+
+/** ********** Fonts ********** **/
+* {
+  font-family: "Rajdhani", "Iosevka Nerd Font", archcraft, sans-serif;
+  font-size: 15px;
+  background-color: transparent;
+  background: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+/** ********** Waybar Window ********** **/
+window#waybar {
+  background-color: transparent;
+  color: #ff0000;
+  border-bottom: 1px solid #c40909;
+  border-radius: 0px 0px 0px 0px;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+ 
+
+window#waybar.hidden {
+  opacity: 0.5;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+  margin-top: 5px;
+}
+
+/* modules-left */
+.modules-left {
+  min-width: 260px;
+  padding-left: 15px;
+  background-image: url("/home/mrnngstr666/.config/hypr/waybar/bg-left-mod.png")
+}
+/* .modules-right  */
+.modules-right {
+padding-right: 20px;
+}
+/** ********** Pulseaudio ********** **/
+#pulseaudio {
+  font-size: 25px;
+  text-shadow: 0px 0px 5px rgba(225, 225, 225, 0.9);
+  color: #ffffff;
+  font-weight: 600;
+  min-width: 40px;
+}
+
+#pulseaudio-slider {
+  margin-top: 24px;
+  min-width: 70px;
+}
+
+#pulseaudio-slider slider {
+  min-height: 0px;
+  min-width: 0px;
+  opacity: 0;
+  background-image: none;
+  border: none;
+  box-shadow: none;
+}
+
+#pulseaudio-slider trough {
+  min-height: 3px;
+  min-width: 70px;
+  border-radius: 5px;
+  box-shadow: 2px 4px 8px rgba(225, 225, 225, 0.6);
+  background-color: transparent;
+}
+
+#pulseaudio-slider highlight {
+  min-width: 10px;
+  border-radius: 5px;
+  box-shadow: 2px 4px 8px rgba(225, 225, 225, 0.6);
+  background-color: #ffffff;
+}
+
+
+/** ********** Backlight ********** **/
+#backlight {
+  min-width: 40px;
+  font-size: 25px;
+  font-weight: 600;
+  text-shadow: 0px 0px 5px rgba(225, 225, 225, 0.9);
+  color: #ffffff;
+}
+
+#backlight-slider {
+  min-width: 70px;
+  margin: 24px 10px 0px 2px;
+}
+
+#backlight-slider slider {
+  min-height: 0px;
+  min-width: 0px;
+  opacity: 0;
+  background-image: none;
+  border: none;
+  box-shadow: none;
+}
+
+#backlight-slider trough {
+  min-height: 3px;
+  min-width: 70px;
+  border-radius: 5px;
+  background-color: transparent;
+  box-shadow: 2px 4px 8px rgba(225, 225, 225, 0.6);
+
+}
+
+#backlight-slider highlight {
+  min-width: 10px;
+  border-radius: 5px;
+  box-shadow: 2px 4px 8px rgba(225, 225, 225, 0.6);
+  background-color: #ffffff;
+}
+
+/** ********** WLR Desktop ********** **/
+#workspaces {
+  background-color: transparent;
+  border-radius: 4px;
+  margin: 0px 0px;
+  padding: 0px 0px;
+}
+
+#workspaces button {
+  all: unset;
+  margin: 0px 3px;
+  padding: 8px 6px 0px 6px;
+  text-shadow: 0px 0px 4px rgba(225, 0, 0, 0.4);
+  color: #ff0000;
+  border-bottom: 2px solid #ff0000;
+  border-radius: 0px;
+  font-weight: 600;
+  transition: all ease 0.5s;
+ 
+}
+
+#workspaces button.active:hover,
+#workspaces button.urgent:hover,
+#workspaces button:hover {
+  color: #ffffff;
+  background-color: transparent;
+  border-bottom: 2px solid #ffffff;
+  background: none;
+  text-shadow: 0px 0px 4px rgba(225, 225, 225, 0.9);
+}
+
+#workspaces button.active {
+  color: #ffffff;
+  border-bottom: 2px solid #ffffff;
+  text-shadow: 0px 0px 9px rgba(225, 225, 225, 0.9);
+}
+
+#workspaces button.urgent {
+  text-shadow: 0px 0px 4px rgba(225, 0, 0, 0.4);
+  color: #ff0000;
+}
+
+#workspaces button.hidden {
+  text-shadow: 0px 0px 4px rgba(225, 0, 0, 0.4);
+  color: #ff0000;
+}
+
+
+/** ********** CPU ********** **/
+#custom-cpuid {
+  padding-top: 8px;
+  font-size: 17px;
+  font-weight: 600;
+  margin-left: 10px;
+  font-family: Orbitron;
+  text-shadow: 0px 0px 4px rgba(225, 225, 0, 0.4);
+  color: #ffff00;
+}
+#cpu {
+  font-size: 20px;
+  font-weight: 600;
+  padding-top: 8px;
+  text-shadow: 0px 0px 4px rgba(225, 0, 0, 0.4);
+  color: #ff0000;
+}
+
+/** ********** Memory ********** **/
+#memory {
+  font-size: 20px;
+  padding-top: 8px;
+  font-weight: 600;
+  text-shadow: 0px 0px 4px rgba(225, 0, 0, 0.4);
+  color: #ff0000;
+}
+
+/** ********** Disk ********** **/
+#custom-str {
+  padding-top: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-left: 10px;
+  font-family: Orbitron;
+  text-shadow: 0px 0px 4px rgba(225, 225, 0, 0.4);
+  color: #ffff00;
+}
+
+#disk {
+  padding-top: 10px;
+  font-size: 20px;
+  text-shadow: 0px 0px 4px rgba(225, 0, 0, 0.4);
+  font-weight: 600;
+  color: #ff0000;
+
+}

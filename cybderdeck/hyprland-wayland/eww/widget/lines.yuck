@@ -1,0 +1,320 @@
+(defwidget var-cache-line []
+  (image :path "./images/access/lines/var-cache-line.svg"
+    :image-width 52
+    :image-height 99
+    :halign "start"
+    :valign "start"
+    :class "var-cache-line"
+  )
+)
+
+(defwidget var-log-line []
+  (image :path "./images/access/lines/var-log-line.svg"
+    :image-width 158
+    :image-height 114
+    :halign "start"
+    :valign "start"
+    :class "var-log-line"
+  )
+)
+
+(defwidget var-spool-line []
+  (image :path "./images/access/lines/var-spool-line.svg"
+    :image-width 232
+    :image-height 132
+    :halign "start"
+    :valign "start"
+    :class "var-spool-line"
+  )
+)
+(defwidget var-temp-line []
+  (image :path "./images/access/lines/var-temp-line.svg"
+    :image-width 356
+    :image-height 146
+    :halign "start"
+    :valign "start"
+    :class "var-temp-line"
+  )
+)
+
+(defwidget user-bin-line []
+  (image :path "./images/access/lines/user-bin-line.svg"
+    :image-width 357
+    :image-height 102
+    :halign "end"
+    :valign "start"
+    :class "user-bin-line"
+  )
+)
+(defwidget user-include-line []
+  (image :path "./images/access/lines/user-include-line.svg"
+    :image-width 230
+    :image-height 127
+    :halign "end"
+    :valign "start"
+    :class "user-include-line"
+  )
+)
+(defwidget user-lib-line []
+  (image :path "./images/access/lines/user-lib-line.svg"
+    :image-width 130
+    :image-height 97
+    :halign "end"
+    :valign "start"
+    :class "user-lib-line"
+  )
+)
+(defwidget user-sbin-line []
+  (image :path "./images/access/lines/user-sbin-line.svg"
+    :image-width 27
+    :image-height 63
+    :halign "end"
+    :valign "start"
+    :class "user-sbin-line"
+  )
+)
+(defwidget user-sudo-line []
+  (image :path "./images/access/lines/user-sudo-line.svg"
+    :image-width 33
+    :image-height 108
+    :halign "end"
+    :valign "start"
+    :class "user-sudo-line"
+  )
+)
+(defwidget sudo-alacritty-line []
+  (image :path "./images/access/lines/sudo-alacritty-line.svg"
+    :image-width 817
+    :image-height 215
+    :halign "end"
+    :valign "start"
+    :class "sudo-alacritty-line"
+  )
+)
+
+(defwidget sudo-code-line []
+  (image :path "./images/access/lines/sudo-code-line.svg"
+    :image-width 36
+    :image-height 62
+    :halign "end"
+    :valign "start"
+    :class "sudo-code-line"
+  )
+)
+
+(defwidget sudo-thunar-line []
+  (image :path "./images/access/lines/sudo-thunar-line.svg"
+    :image-width 615
+    :image-height 159
+    :halign "end"
+    :valign "start"
+    :class "sudo-thunar-line"
+  )
+)
+(defwidget sudo-vim-line []
+  (image :path "./images/access/lines/sudo-vim-lines.svg"
+    :image-width 166
+    :image-height 113
+    :halign "end"
+    :valign "start"
+    :class "sudo-vim-line"
+  )
+)
+(defwidget sudo-geany-line []
+  (image :path "./images/access/lines/sudo-geany-line.svg"
+    :image-width 434
+    :image-height 163
+    :halign "end"
+    :valign "start"
+    :class "sudo-geany-line"
+  )
+)
+(defwidget sudo-ranger-line []
+  (image :path "./images/access/lines/sudo-ranger-line.svg"
+    :image-width 292
+    :image-height 142
+    :halign "end"
+    :valign "start"
+    :class "sudo-ranger-line"
+  )
+)
+
+; bottom
+
+(defwidget libs-line []
+  (image :path "./images/access/lines/libs-line.svg"
+    :image-width 316
+    :image-height 70
+    :halign "start"
+    :valign "end"
+    :class "libs-line"
+  )
+)
+
+(defwidget home-line []
+  (image :path "./images/access/lines/home-line.svg"
+    :image-width 185
+    :image-height 54
+    :halign "start"
+    :valign "end"
+    :class "home-line"
+  )
+)
+
+(defwidget etc-line []
+  (image :path "./images/access/lines/etc-line.svg"
+    :image-width 50
+    :image-height 15
+    :halign "start"
+    :valign "end"
+    :class "etc-line"
+  )
+)
+(defwidget media-line []
+  (image :path "./images/access/lines/media-line.svg"
+    :image-width 377
+    :image-height 88
+    :halign "start"
+    :valign "end"
+    :class "media-line"
+  )
+)
+
+(defwidget mnt-line []
+  (image :path "./images/access/lines/mnt-line.svg"
+    :image-width 266
+    :image-height 90
+    :halign "start"
+    :valign "end"
+    :class "mnt-line"
+  )
+)
+
+(defwidget var-line []
+  (image :path "./images/access/lines/var-line.svg"
+    :image-width 443
+    :image-height 393
+    :halign "start"
+    :valign "end"
+    :class "var-line"
+  )
+)
+
+(defwidget opt-line []
+  (image :path "./images/access/lines/opt-line.svg"
+    :image-width 57
+    :image-height 79
+    :halign "start"
+    :valign "end"
+    :class "opt-line"
+  )
+)
+
+(defwidget sbinx-line []
+  (image :path "./images/access/lines/sbinx-line.svg"
+    :image-width 43
+    :image-height 64
+    :halign "start"
+    :valign "end"
+    :class "sbinx-line"
+  )
+)
+
+(defwidget user-line []
+  (image :path "./images/access/lines/user-line.svg"
+    :image-width 493
+    :image-height 263
+    :halign "end"
+    :valign "end"
+    :class "user-line"
+  )
+)
+
+
+
+(defwidget srv-line []
+  (image :path "./images/access/lines/srv-line.svg"
+    :image-width 101
+    :image-height 111
+    :halign "end"
+    :valign "end"
+    :class "srv-line"
+  )
+)
+
+(defwidget tmp-line []
+  (image :path "./images/access/lines/tmp-line.svg"
+    :image-width 227
+    :image-height 128
+    :halign "end"
+    :valign "end"
+    :class "tmp-line"
+  )
+)
+
+(defwidget binx-line []
+  (image :path "./images/access/lines/binx-line.svg"
+    :image-width 50
+    :image-height 16
+    :halign "end"
+    :valign "end"
+    :class "binx-line"
+  )
+)
+(defwidget boot-line []
+  (image :path "./images/access/lines/boot-line.svg"
+    :image-width 227
+    :image-height 128
+    :halign "end"
+    :valign "end"
+    :class "boot-line"
+  )
+)
+(defwidget dev-line []
+  (image :path "./images/access/lines/dev-line.svg"
+    :image-width 386
+    :image-height 237
+    :halign "end"
+    :valign "end"
+    :class "dev-line"
+  )
+)
+
+(defwidget footer []
+  (box
+    :orientation "h"
+    :space-evenly "false"
+    :vexpand "false"
+    :hexpand "false"
+    :halign "end"
+    :valign "end"
+    :spacing 4
+    :class "option"
+    (image :path "./images/options/confirm.png"
+      :image-width 24
+      :image-height 24
+      :halign "start"
+      :class "options-icon"
+    )
+    (label
+      :class "options-label"
+      :halign "start"
+      :text "SELECT"
+    )
+    (image :path "./images/options/close.png"
+      :image-width 24
+      :image-height 25
+      :halign "start"
+      :class "options-icon"
+    )
+    (button
+      :onclick "eww close access-manager && eww close main-bg"
+      (label
+        :class "options-label"
+        :halign "start"
+        :text "CLOSE"
+      )
+    )
+    
+  )
+)
