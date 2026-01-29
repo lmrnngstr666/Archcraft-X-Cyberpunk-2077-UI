@@ -4,9 +4,7 @@ I Using Archcraft Linux BSPWM WM
 
 $THEMES:
 1. flatline
-2. cyberdeck
-3. cyberblack
-4. cyberwhite
+2. cyberdeck 
 
 # for bspwm
 Copy "$THEMES" folder to ~/.config/bspwm/themes/
@@ -18,8 +16,7 @@ Check the Cyberdeck i Already Saparate the config file....
 #support
 if you wana Support me :
 ko-fi.com/mrnngstr666
-
-I still work on other Themes, Keep Chech My Youtube:@lmrnngstr666 or My TikTok:@mrnngstr666_  for more Update ;)
+My Youtube:@lmrnngstr666 or My TikTok:@mrnngstr666_  for more Update ;)
 
 
 
